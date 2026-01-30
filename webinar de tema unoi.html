@@ -658,6 +658,7 @@
             .hero-grid, .two-column, .timeline, .tile-grid, .stat-grid, .roadmap, .faq-grid, .sources-list {
                 grid-template-columns: 1fr;
             }
+            .tile-grid { grid-template-columns: 1fr !important; }
             h1 { font-size: 44px; }
             h2 { font-size: 32px; }
             .info-bar { font-size: 13px; }
@@ -676,6 +677,67 @@
                 display: none;
             }
             .nav-toggle { display: inline-flex; }
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 12px 0 32px; }
+            .slide-container { width: 94vw; padding: 24px; }
+            .slide-title::before { width: 36px; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+            .lead { font-size: 18px; }
+            .list-checked li { font-size: 17px; }
+            .stat h3 { font-size: 24px; }
+            .stat p { font-size: 14px; }
+            .timeline-step { padding: 16px; }
+            .step-icon { width: 72px; height: 72px; font-size: 28px; }
+            .media-frame { border-radius: 14px; }
+            .media-frame { height: auto !important; }
+            .media-frame img { height: auto; object-position: center; }
+            .media-caption { font-size: 12px; }
+            .info-bar { padding: 10px 14px; }
+            .badge { font-size: 13px; }
+            .nav-links {
+                width: 100%;
+                display: grid;
+                gap: 8px;
+            }
+            .nav-links-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+            .nav-links-row a {
+                border-right: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+                padding: 10px 12px;
+                text-align: center;
+            }
+            .nav-links-row a:last-child { border-bottom: none; }
+            .cta-link {
+                width: 100%;
+                justify-content: center;
+                display: inline-flex;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body { padding: 8px 0 24px; }
+            .slide-container { width: 96vw; padding: 20px; border-radius: 14px; }
+            h1 { font-size: 30px; }
+            h2 { font-size: 24px; }
+            .eyebrow { font-size: 12px; letter-spacing: 3px; }
+            .lead { font-size: 16px; }
+            .info-bar { font-size: 12px; gap: 10px; }
+            .badge-row { gap: 8px; }
+            .badge { padding: 5px 10px; }
+            .tile, .stat, .timeline-step, .roadmap-step, .faq, .glass-card {
+                padding: 16px;
+            }
+            .sources-list, .faq-grid { gap: 12px; }
+            .pill { font-size: 12px; padding: 6px 10px; }
+            .media-frame { border-width: 1px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
